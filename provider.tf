@@ -10,7 +10,12 @@ terraform {
 provider "docker" {
   registry_auth {
     address  = "https://registry.hub.docker.com"
-    username = var.dockerhub_username
-    password = var.dockerhub_password
+    
   }
+
 }
+
+# resource "docker_auth" "my_auth" {
+#   username = var.docker_username
+#   password = var.docker_password
+# }

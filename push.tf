@@ -7,6 +7,7 @@ resource "docker_image" "goterraform" {
   provisioner "local-exec" {
     command = "docker push amirianfar/goterraform"
   }
+  # auth = docker_auth.my_auth
 }
 
 resource "docker_container" "goterraform" {
@@ -19,6 +20,5 @@ resource "docker_container" "goterraform" {
 }
 
 
-variable "dockerhub_username" {}
-variable "dockerhub_password" {}
+
 
